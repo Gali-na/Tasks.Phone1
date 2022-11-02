@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Arrays;
+
 public class Network {
     private Phone[] numbersUsers;
 
@@ -11,26 +13,22 @@ public class Network {
         return numbersUsers;
     }
 
-    public void setNumbersUsers(Phone[] numbersUsers) {
-        this.numbersUsers = numbersUsers;
-    }
-
-    void addNewUser(Phone newPhone) {
+    String addNewUser(Phone newPhone) {
         for (int i = 0; i < numbersUsers.length; i++) {
             if (numbersUsers[i] != null) {
                 if (numbersUsers[i].getNumber().equals(newPhone.getNumber())) {
-                    System.out.println("This number is in the list of network users");
-                    return;
+                    return "This number is in the list of network users";
+
                 }
             }
         }
         for (int i = 0; i < numbersUsers.length; i++) {
             if (numbersUsers[i] == null) {
                 numbersUsers[i] = newPhone;
-                System.out.println("Network number registered successfully");
-                return;
+                return "Network number registered successfully";
             }
         }
+        return null;
     }
 
     int numberCheck(String number) {
@@ -42,4 +40,15 @@ public class Network {
         return -1;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Network network)) return false;
+        return Arrays.equals(getNumbersUsers(), network.getNumbersUsers());
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(getNumbersUsers());
+    }
 }

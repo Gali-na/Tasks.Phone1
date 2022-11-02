@@ -12,15 +12,24 @@ public class Phone {
         network = new Network();
     }
 
+    public Phone(String number, String userName, String userSurname) {
+        this.number = number;
+        this.userName = userName;
+        this.userSurname = userSurname;
+    }
+
     public String getNumber() {
+
         return number;
     }
 
     public void setNumber(String number) {
+
         this.number = number;
     }
 
     public String getUserName() {
+
         return userName;
     }
 
@@ -29,18 +38,22 @@ public class Phone {
     }
 
     public String getUserSurname() {
+
         return userSurname;
     }
 
     public void setUserSurname(String userSurname) {
+
         this.userSurname = userSurname;
     }
 
     public Network getNetwork() {
+
         return network;
     }
 
     void onlineRegistration() {
+
         network.addNewUser(this);
     }
 
@@ -74,12 +87,10 @@ public class Phone {
                 && userName.equals(phone.userName)
                 && userSurname.equals(phone.userSurname);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(number, userName, userSurname);
     }
-
     @Override
     public String toString() {
         return "Phone{" + "number='" + number + '\''
