@@ -17,8 +17,7 @@ public class Main {
         phoneOne.setUserSurname("Zolotan");
 
         phoneOne.onlineRegistration();
-        phoneOne.call("0967974965");
-        phoneOne.incomingCall("0967974965");
-
+        System.out.println(phoneOne.call("0967974965"));
+        System.out.println(phoneOne.call("09679749656"));
     }
 }

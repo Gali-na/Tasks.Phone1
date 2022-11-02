@@ -57,21 +57,14 @@ public class Phone {
         network.addNewUser(this);
     }
 
-    void call(String number) {
+    String call(String number) {
+        String rezult = "";
         if (network.numberCheck(number) != -1) {
-            System.out.println("Subscriber call");
+            rezult = "Subscriber call";
         } else {
-            System.out.println("Subscriber does not exist");
+            rezult = "Subscriber does not exist";
         }
-    }
-
-    void incomingCall(String number) {
-        if (network.numberCheck(number) != -1) {
-            int numberUserInArry = network.numberCheck(number);
-            System.out.println(this.network.getNumbersUsers()[numberUserInArry].toString());
-        } else {
-            System.out.println("This phone is on the network");
-        }
+        return rezult;
     }
 
     @Override
@@ -87,10 +80,12 @@ public class Phone {
                 && userName.equals(phone.userName)
                 && userSurname.equals(phone.userSurname);
     }
+
     @Override
     public int hashCode() {
         return Objects.hash(number, userName, userSurname);
     }
+
     @Override
     public String toString() {
         return "Phone{" + "number='" + number + '\''
