@@ -36,7 +36,7 @@ class NetworkTest {
     }
 
     @Test
-    void getNumbersUsersReturnNetwork_IfNetworkIsEmpty() {
+    void getNumbersUsers_ReturnNetwork_IfNetworkIsEmpty() {
         Network networkTest = new Network();
         Phone[] testPhone = new Phone[100];
         assertArrayEquals(networkTest.getNumbersUsers(), testPhone);
@@ -44,7 +44,7 @@ class NetworkTest {
 
 
     @Test
-    void addNewUser() {
+    void addNewUser_ReturnInformation_IfNetworkHasNumberPhone() {
         Phone phoneTest = new Phone("0967974964", "Sergey", "Tsivka");
         String cousoleOutputStream = "";
         String result = "This number is in the list of network users";
@@ -62,8 +62,32 @@ class NetworkTest {
         }
         assertEquals(result, networkTest.addNewUser(phoneTest));
     }
+    @Test
+    void addNewUser_ReturnInformation_IfNetworkHasNotNumberPhone() {
+        Phone phoneTest = new Phone("0967974968", "Anton", "Zolotarev");
+        String cousoleOutputStream = "";
+        String result = "Network number registered successfully";
+
+        try {
+            ByteArrayOutputStream outputStream = new ByteArrayOutputStream(200);
+            PrintStream capture = new PrintStream(outputStream);
+            System.setOut(capture);
+            capture.flush();
+            cousoleOutputStream = outputStream.toString();
+            PrintStream originalOut = System.out;
+            System.setOut(originalOut);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        assertEquals(result, networkTest.addNewUser(phoneTest));
+    }
+    @Test
+    void numberCheck_ReturnNotNegativeNumber_IfNetworkHasNumberPhone() {
+      assertNotEquals( -1, networkTest.numberCheck("0967974964"));
+    }
 
     @Test
-    void numberCheck() {
+    void numberCheck_ReturnNegativeNumber_IfNetworkHasNotNumberPhone() {
+        assertEquals( -1, networkTest.numberCheck("09679749695"));
     }
 }

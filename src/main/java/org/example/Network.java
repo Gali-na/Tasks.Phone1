@@ -33,8 +33,10 @@ public class Network {
 
     int numberCheck(String number) {
         for (int i = 0; i < numbersUsers.length; i++) {
-            if (numbersUsers[i].getNumber().equals(number)) {
-                return i;
+            if (numbersUsers[i] != null) {
+                if (numbersUsers[i].getNumber().equals(number)) {
+                    return i;
+                }
             }
         }
         return -1;
@@ -42,8 +44,13 @@ public class Network {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Network network)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Network network = (Network) o;
         return Arrays.equals(getNumbersUsers(), network.getNumbersUsers());
     }
 

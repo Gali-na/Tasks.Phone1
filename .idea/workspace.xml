@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e16cce2-e7bb-4be0-90d0-89110c05c7b2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/PhoneTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Network.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Phone.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/NetworkTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/NetworkTest.java" afterDir="false" />
@@ -54,7 +56,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.NetworkTest">
+  <component name="RunManager" selected="JUnit.PhoneTest.call">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="tasks.phone1" />
@@ -68,7 +70,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NetworkTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PhoneTest.call" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tasks.phone1" />
       <extension name="coverage">
         <pattern>
@@ -77,29 +79,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.NetworkTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NetworkTest.addNewUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tasks.phone1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.NetworkTest" />
-      <option name="METHOD_NAME" value="addNewUser" />
+      <option name="MAIN_CLASS_NAME" value="org.example.PhoneTest" />
+      <option name="METHOD_NAME" value="call" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NetworkTest.getNumbersUsersReturnNetwork_IfNetworkIsEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PhoneTest.getNetwork" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tasks.phone1" />
       <extension name="coverage">
         <pattern>
@@ -108,14 +95,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.NetworkTest" />
-      <option name="METHOD_NAME" value="getNumbersUsersReturnNetwork_IfNetworkIsEmpty" />
+      <option name="MAIN_CLASS_NAME" value="org.example.PhoneTest" />
+      <option name="METHOD_NAME" value="getNetwork" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NetworkTest.getNumbersUsers_ReturnNetwork_IfNetworkIsntEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PhoneTest.getUserSurname_ReturNull_IfPhoneIsNotExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tasks.phone1" />
       <extension name="coverage">
         <pattern>
@@ -124,8 +111,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.NetworkTest" />
-      <option name="METHOD_NAME" value="getNumbersUsers_ReturnNetwork_IfNetworkIsntEmpty" />
+      <option name="MAIN_CLASS_NAME" value="org.example.PhoneTest" />
+      <option name="METHOD_NAME" value="getUserSurname_ReturNull_IfPhoneIsNotExist" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PhoneTest.onlineRegistration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tasks.phone1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.PhoneTest" />
+      <option name="METHOD_NAME" value="onlineRegistration" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.NetworkTest" />
+        <item itemvalue="JUnit.PhoneTest.call" />
+        <item itemvalue="JUnit.PhoneTest.getNetwork" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.NetworkTest.addNewUser" />
-        <item itemvalue="JUnit.NetworkTest.getNumbersUsers_ReturnNetwork_IfNetworkIsntEmpty" />
-        <item itemvalue="JUnit.NetworkTest.getNumbersUsersReturnNetwork_IfNetworkIsEmpty" />
+        <item itemvalue="JUnit.PhoneTest.onlineRegistration" />
+        <item itemvalue="JUnit.PhoneTest.getUserSurname_ReturNull_IfPhoneIsNotExist" />
       </list>
     </recent_temporary>
   </component>
@@ -167,9 +170,32 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Network.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Phone.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="1" />
+          <line>69</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/PhoneTest.java</url>
+          <line>30</line>
+          <properties class="org.example.PhoneTest" method="getNumbe_ReturnNull_IfPhoneIsNotExit">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/PhoneTest.java</url>
+          <line>47</line>
+          <properties class="org.example.PhoneTest" method="getUserName_ReturnNull_IfPhoneIsNotExist">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
